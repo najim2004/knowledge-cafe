@@ -7,12 +7,14 @@ import Header from './components/Header/Header'
 function App() {
   const [bookmarks,setBookmarks] =useState([]);
   const [readingTime,setReadingTime] =useState(0);
-  const handleBookmarks =(title)=>{
-    setBookmarks([...bookmarks,title])
+  const handleBookmarks =(blog)=>{
+    setBookmarks([...bookmarks,blog])
     
   };
-  const handleReadingTime =(reading_time)=>{
+  const handleReadingTime =(id,reading_time)=>{
     setReadingTime(readingTime+reading_time)
+    console.log(bookmarks);
+    setBookmarks(bookmarks.filter(bookmark=>bookmark.id!==id));
   };
   return (
     <div className='max-w-[1280px] mx-auto'>

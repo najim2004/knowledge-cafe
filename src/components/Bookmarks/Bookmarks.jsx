@@ -11,7 +11,7 @@ const Bookmarks = ({bookmarks, readingTime}) => {
             <hr className='border-black border-dashed w-full border-t-[1px]' />
             {
                 bookmarks.map((bookmark,idx) =><div key={idx} className="p-5 bg-white rounded-lg text-[18px] font-semibold">
-                <h1 className='max-w-[311px]'>{bookmark}</h1>
+                <h1 className='max-w-[311px]'>{bookmark.title}</h1>
                 </div>)
             }
             </div>
