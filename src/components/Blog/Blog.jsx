@@ -19,7 +19,7 @@ const Blog = ({blog, handleBookmarks}) => {
             </div>
             <h2 className="text-[40px] font-bold max-w-[737px] my-4 leading-[64px]">{title}</h2>
             <p className='flex gap-4 text-[rgba(17,17,17,0.60)] text-xl font-medium'>{hashtags.map((hash,idx)=><span key={idx}>#{hash}</span>)}</p>
-            <button onClick={()=>handleBookmarks(title)} className='mt-5 text-xl font-semibold underline text-[#6047EC]'>Mark as read</button>
+            <button onClick={()=>handleBookmarks(title, reading_time)} className='mt-5 text-xl font-semibold underline text-[#6047EC]'>Mark as read</button>
             <hr className='my-[40px] bg-[rgba(17,17,17,0.10)]' />
         </div>
     );

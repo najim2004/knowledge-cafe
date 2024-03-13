@@ -6,8 +6,10 @@ import Header from './components/Header/Header'
 
 function App() {
   const [bookmarks,setBookmarks] =useState([]);
-  const handleBookmarks =(title)=>{
+  const [readingTime,setReadingTime] =useState(0);
+  const handleBookmarks =(title, reading_time)=>{
     setBookmarks([...bookmarks,title])
+    setReadingTime(readingTime+reading_time)
   }
   return (
     <div className='max-w-[1280px] mx-auto'>
@@ -15,7 +17,7 @@ function App() {
       <hr className='my-8 bg-[rgba(17,17,17,0.15)]' />
       <div className='flex gap-6 '>
       <Blogs handleBookmarks={handleBookmarks}></Blogs>
-      <Bookmarks bookmarks={bookmarks}></Bookmarks>
+      <Bookmarks bookmarks={bookmarks} readingTime={readingTime}></Bookmarks>
       </div>
       
     </div>
